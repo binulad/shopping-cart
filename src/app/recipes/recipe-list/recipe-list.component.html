@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-end">
+    <button type="button" class="btn btn-primary">New Recipe</button>
+  </div>
+  <div class="list-group">
+    <app-recipe-item *ngFor="let item of recipes; let i = index" [recipe]="item" (selectedRecipe)="onClickRecipe(item)"></app-recipe-item>
+  </div>
+</div>

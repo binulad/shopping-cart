@@ -1,0 +1,20 @@
+<form class="mt-3">
+  <div class="row">
+    <div class="col">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" #nameInput placeholder="Ingredient Name">
+    </div>
+    <div class="col">
+      <label for="amount" class="form-label">Amount</label>
+      <input type="number" class="form-control" id="amount" #amountInput placeholder="Amount">
+    </div>
+    <div class="col">
+      <label for="action" class="form-label invisible">Action</label>
+      <div class="d-flex align-items-center">
+        <button type="submit" class="btn btn-success" (click)="handleAddEvent()">Add</button>
+        <button type="submit" class="btn btn-danger mx-2">Delete</button>
+        <button type="submit" class="btn btn-primary">Reset</button>
+      </div>
+    </div>
+  </div>
+</form>

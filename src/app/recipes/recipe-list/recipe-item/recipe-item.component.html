@@ -1,0 +1,13 @@
+<a href="#" class="list-group-item list-group-item-action" (click)="handleClick()">
+  <div class="row g-0">
+    <div class="col-md-3">
+      <img [src]="recipe.imagePath" class="rounded-circle img-fluid" [alt]="recipe.name">
+    </div>
+    <div class="col-md-9">
+      <div class="ps-3">
+        <h5 class="card-title">{{recipe.name}}</h5>
+        <p class="card-text">{{recipe.description}}</p>
+      </div>
+    </div>
+  </div>
+</a>

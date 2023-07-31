@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shopping-cart';
+
+  public isShowRecipe: boolean = true;
+
+  onMenuChange(activeMenu: string) {
+    this.isShowRecipe = (activeMenu == 'recipe') ? true : false;
+  }
 }

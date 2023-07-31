@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    <h5 class="card-title mb-0">{{selectedRecipe.name}}</h5>
+
+    <!-- Manage Button -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Manage
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="#">Add to cart</a></li>
+        <li><a class="dropdown-item" href="#">Edit</a></li>
+        <li><a class="dropdown-item" href="#">Delete</a></li>
+      </ul>
+    </div>
+    <!-- End: Manage Button -->
+  </div>
+  <div class="card-body">
+    <!-- Image of Recipe -->
+    <img [src]="selectedRecipe.imagePath" class="img-fluid mb-3 rounded" alt="Recipe Image">
+    <!-- End: Image of Recipe -->
+
+    <!-- Description -->
+    <p class="text-muted">{{selectedRecipe.description }}</p>
+    <!-- End: Description -->
+
+    <!-- Ingredients -->
+    <p>Ingredients</p>
+    <!-- End: Ingredients -->
+  </div>
+</div>
