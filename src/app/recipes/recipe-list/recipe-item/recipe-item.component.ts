@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { Recipe } from '../../recipe.model';
 
 @Component({
@@ -8,9 +8,11 @@ import { Recipe } from '../../recipe.model';
 })
 export class RecipeItemComponent {
   @Input() public recipe!: Recipe;
-  @Output() public selectedRecipe = new EventEmitter<Recipe>();
+  @Input() public index!: number;
 
-  handleClick() {
-    this.selectedRecipe.emit();
-  }
+  constructor() {}
+
+  // handleClick() {
+  //   this.recipeService.selectedRecipe.emit(this.recipe);
+  // }
 }

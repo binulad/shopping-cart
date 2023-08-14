@@ -1,12 +1,14 @@
-<a href="#" class="list-group-item list-group-item-action" (click)="handleClick()">
+<a [routerLink]="[index]" routerLinkActive="active" class="list-group-item list-group-item-action cursor-pointer">
   <div class="row g-0">
-    <div class="col-md-3">
-      <img [src]="recipe.imagePath" class="rounded-circle img-fluid" [alt]="recipe.name">
+    <div class="col-md-2">
+      <img [src]="recipe.imagePath" class="rounded-circle img-fluid recipe-img" [alt]="recipe.name">
     </div>
-    <div class="col-md-9">
+    <div class="col-md-10">
       <div class="ps-3">
         <h5 class="card-title">{{recipe.name}}</h5>
         <p class="card-text">{{recipe.description}}</p>
+        <!-- <p class="card-text" appBasicHiLightText [defaultColor]="'lightYellow'" [hiLightColor]="'LightPink'">{{recipe.description}}</p>
+        <p class="card-text" appBasicHiLightText [defaultColor]="'lightBlue'" [hiLightColor]="'lightGreen'">{{recipe.description}}</p> -->
       </div>
     </div>
   </div>

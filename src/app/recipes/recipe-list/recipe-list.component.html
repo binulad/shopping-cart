@@ -1,8 +1,8 @@
 <div class="card">
   <div class="card-header d-flex justify-content-end">
-    <button type="button" class="btn btn-primary">New Recipe</button>
+    <a [routerLink]="['new']" class="btn btn-primary cursor-pointer">New Recipe</a>
   </div>
-  <div class="list-group">
-    <app-recipe-item *ngFor="let item of recipes; let i = index" [recipe]="item" (selectedRecipe)="onClickRecipe(item)"></app-recipe-item>
+  <div class="list-group overflow-hidden">
+    <app-recipe-item *ngFor="let item of recipes; let i = index" [recipe]="item" [index]="i"></app-recipe-item>
   </div>
 </div>

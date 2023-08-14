@@ -6,11 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'shopping-cart';
-
-  public isShowRecipe: boolean = true;
-
-  onMenuChange(activeMenu: string) {
-    this.isShowRecipe = (activeMenu == 'recipe') ? true : false;
-  }
 }
