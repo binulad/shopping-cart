@@ -9,6 +9,7 @@ import { ShoppingListServices } from './shopping-list.service';
 })
 export class ShoppingListComponent implements OnInit {
   public ingredients: Ingredient[] = [];
+  public selectedItem!: Ingredient;
 
   constructor(private shoppingListService: ShoppingListServices) {}
 
@@ -18,4 +19,8 @@ export class ShoppingListComponent implements OnInit {
       this.ingredients = ingredients;
     });
   } 
+
+  onSelectItem(index: number) {
+    this.shoppingListService.editedItemIndex.next(index);
+  }
 }

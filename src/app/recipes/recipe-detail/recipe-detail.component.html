@@ -10,7 +10,7 @@
       <ul class="dropdown-menu dropdown-menu-end" [class.show]="dropdown.isShow">
         <li><a class="dropdown-item cursor-pointer" (click)="addToShoppingList(selectedRecipe.ingredients)">To Shopping List</a></li>
         <li><a class="dropdown-item cursor-pointer" (click)="handleEdit()">Edit</a></li>
-        <li><a class="dropdown-item cursor-pointer">Delete</a></li>
+        <li><a class="dropdown-item cursor-pointer" (click)="handleDelete()">Delete</a></li>
       </ul>
     </div>
     <!-- End: Manage Button -->

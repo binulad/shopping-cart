@@ -1,14 +1,22 @@
-<a [routerLink]="[index]" routerLinkActive="active" class="list-group-item list-group-item-action cursor-pointer">
-  <div class="row g-0">
-    <div class="col-md-2">
-      <img [src]="recipe.imagePath" class="rounded-circle img-fluid recipe-img" [alt]="recipe.name">
+<a
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  class="list-group-item list-group-item-action cursor-pointer"
+>
+  <div class="d-flex">
+    <div class="recipe-img flex-shrink-0">
+      <img
+        [src]="recipe.imagePath"
+        class="rounded img-fluid"
+        [alt]="recipe.name"
+      />
     </div>
-    <div class="col-md-10">
+    <div class="flex-grow-1">
       <div class="ps-3">
-        <h5 class="card-title">{{recipe.name}}</h5>
-        <p class="card-text">{{recipe.description}}</p>
-        <!-- <p class="card-text" appBasicHiLightText [defaultColor]="'lightYellow'" [hiLightColor]="'LightPink'">{{recipe.description}}</p>
-        <p class="card-text" appBasicHiLightText [defaultColor]="'lightBlue'" [hiLightColor]="'lightGreen'">{{recipe.description}}</p> -->
+        <h5 class="card-title">{{ recipe.name }}</h5>
+        <p class="card-text" [title]="recipe.description">
+          {{ recipe.description | textTruncate : 60 }}
+        </p>
       </div>
     </div>
   </div>

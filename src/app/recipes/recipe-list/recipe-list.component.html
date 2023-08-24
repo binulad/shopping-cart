@@ -2,7 +2,12 @@
   <div class="card-header d-flex justify-content-end">
     <a [routerLink]="['new']" class="btn btn-primary cursor-pointer">New Recipe</a>
   </div>
-  <div class="list-group overflow-hidden">
+  <div class="list-group overflow-hidden" *ngIf="recipes.length, else elseBlock">
     <app-recipe-item *ngFor="let item of recipes; let i = index" [recipe]="item" [index]="i"></app-recipe-item>
   </div>
+  <ng-template #elseBlock>
+    <div class="text-center my-3 text-muted">
+      No Recipe Available
+    </div>
+  </ng-template>
 </div>
